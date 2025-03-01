@@ -2,7 +2,15 @@ import "./Card.css"
 import logo from "./../../../public/images/logo.svg"
 import Statistics from "./statistics/Statistics"
 import data from "../../../data.json"
+import { useState } from "react"
 export default function Card() {
+    const [isFirst , setIsFirst] = useState(false)
+    let greatest = 0 ;
+    for(let object of data ) {
+        if(object.amount > greatest) {
+            greatest = object.amount
+        }
+    }
     return (
         <section className="card-container">
             <div className="upper-card">
@@ -17,7 +25,7 @@ export default function Card() {
                     <div className="card-statistics">
                         {data.map((e , index) => {
                             return (
-                            <Statistics  key={index} value={e.amount} day={e.day} />
+                            <Statistics  key={index} value={e.amount} day={e.day} first={e.amount == greatest ? true : false} />
                         )
                         })}
                     </div>

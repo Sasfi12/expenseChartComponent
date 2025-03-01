@@ -5,7 +5,7 @@
     align-items: center;
 .statistic-bar {
     border-radius: 5px;
-    background-color: lightcoral;
+    background-color: var(--soft-red);
     width: 50px;
 
     }
@@ -17,4 +17,7 @@
             display: revert;
         }
     }
+}
+#isFirst {
+    background-color: hsl(186, 34%, 60%);
 }
