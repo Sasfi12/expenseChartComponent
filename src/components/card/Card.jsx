@@ -4,10 +4,12 @@ import Statistics from "./statistics/Statistics"
 import data from "../../../data.json"
 export default function Card() {
     let greatest = 0 ;
+    let total = 0 ;
     for(let object of data ) {
         if(object.amount > greatest) {
             greatest = object.amount
         }
+        total += object.amount
     }
     return (
         <section className="card-container">
@@ -19,7 +21,7 @@ export default function Card() {
                 <img src= {logo} alt="logo" />
             </div>
             <div className="main-card">
-                    <h1>Spending - Last 7 days </h1>
+                    <h1>Spending - This month </h1>
                     <div className="card-statistics">
                         {data.map((e , index) => {
                             return (
@@ -31,7 +33,7 @@ export default function Card() {
                     <div className="card-footer">
                         <div className="card-footer-current">
                             <p>Total this month</p>
-                            <h1>$478.33</h1>
+                            <h1>{total}</h1>
                         </div>
                         <div className="card-footer-previous">
                             <p>from last month</p>

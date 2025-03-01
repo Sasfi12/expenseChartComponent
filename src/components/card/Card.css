@@ -6,8 +6,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 400px ;
-    height: 400px;
+    width: 28rem ;
+    height: 30rem;
     padding: 20px;
     padding-left: 25px; padding-right: 25px;
     margin: 1rem;
@@ -49,14 +49,17 @@
         .card-statistics {
             display: flex;
             justify-content: space-around; 
-            height: 150px;
+            height: 200px;
         }
     }
     .card-footer {
         display: flex;
         justify-content: space-between;
-        h1 {
-            font-size: xx-large;
+        .card-footer-current {
+            display: flex; flex-direction: column;
+        }
+        .card-footer-previous {
+            display: flex; flex-direction: column-reverse;
         }
     }
 }
