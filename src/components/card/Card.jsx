@@ -3,7 +3,7 @@ import logo from "./../../../public/images/logo.svg"
 import Statistics from "./statistics/Statistics"
 import data from "../../../data.json"
 export default function Card() {
-    let greatest = 0 ;
+    let greatest = 0
     let total = 0 ;
     for(let object of data ) {
         if(object.amount > greatest) {
@@ -33,7 +33,7 @@ export default function Card() {
                     <div className="card-footer">
                         <div className="card-footer-current">
                             <p>Total this month</p>
-                            <h1>{total}</h1>
+                            <h1>${total}</h1>
                         </div>
                         <div className="card-footer-previous">
                             <p>from last month</p>
