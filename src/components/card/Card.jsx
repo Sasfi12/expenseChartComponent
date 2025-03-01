@@ -2,9 +2,7 @@ import "./Card.css"
 import logo from "./../../../public/images/logo.svg"
 import Statistics from "./statistics/Statistics"
 import data from "../../../data.json"
-import { useState } from "react"
 export default function Card() {
-    const [isFirst , setIsFirst] = useState(false)
     let greatest = 0 ;
     for(let object of data ) {
         if(object.amount > greatest) {
