@@ -21,3 +21,10 @@
 #isFirst {
     background-color: hsl(186, 34%, 60%);
 }
+
+@media (max-width: 500px ) {
+    .statistic-bar {
+        width: 30px !important;
+    
+        }
+}
